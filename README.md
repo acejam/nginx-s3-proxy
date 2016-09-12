@@ -1,6 +1,6 @@
 # nginx-s3-proxy
 
-[![Build Status](https://travis-ci.org/acejam/nginx-s3-proxy.svg?branch=basic-setup)](https://travis-ci.org/acejam/nginx-s3-proxy)
+[![Build Status](https://travis-ci.org/acejam/nginx-s3-proxy.svg?branch=master)](https://travis-ci.org/acejam/nginx-s3-proxy)
 [![Docker Stars](https://img.shields.io/docker/stars/acejam/nginx-s3-proxy.svg?maxAge=2592000)](https://hub.docker.com/r/acejam/nginx-s3-proxy)
 [![Docker Pulls](https://img.shields.io/docker/pulls/acejam/nginx-s3-proxy.svg?maxAge=2592000)](https://hub.docker.com/r/acejam/nginx-s3-proxy)
 
