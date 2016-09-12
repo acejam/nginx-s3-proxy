@@ -1,32 +1,20 @@
 # nginx-s3-proxy
 
-A Docker container for a custom version of nginx
-<!--
+[![Build Status](https://travis-ci.org/acejam/nginx-s3-proxy.svg?branch=basic-setup)](https://travis-ci.org/acejam/nginx-s3-proxy)
+[![Docker Stars](https://img.shields.io/docker/stars/acejam/nginx-s3-proxy.svg?maxAge=2592000)](https://hub.docker.com/r/acejam/nginx-s3-proxy)
+[![Docker Pulls](https://img.shields.io/docker/pulls/acejam/nginx-s3-proxy.svg?maxAge=2592000)](https://hub.docker.com/r/acejam/nginx-s3-proxy)
 
-
-[![Build Status](https://travis-ci.org/acejam/docker-bitmessage.svg?branch=basic-setup)](https://travis-ci.org/acejam/docker-bitmessage)
-[![Docker Stars](https://img.shields.io/docker/stars/acejam/bitmessage.svg?maxAge=2592000)](https://hub.docker.com/r/acejam/bitmessage)
-[![Docker Pulls](https://img.shields.io/docker/pulls/acejam/bitmessage.svg?maxAge=2592000)](https://hub.docker.com/r/acejam/bitmessage)
-
-A Docker container for Bitmessage
+A Docker container for reverse proxying S3 via nginx
 
 ## Quick Start
 
-    docker run -d --name bitmessage --restart=always -v /data/bitmessage:/root/.config/PyBitmessage -p 8444:8444 -p 8442:8442 acejam/bitmessage:latest
+    docker run -d --name nginx-s3-proxy --restart=always -e S3_BUCKET=your-bucket-here -e AWS_ACCESS_KEY=your-key-here -e AWS_SECRET_KEY=your-secret-key-here -p 80:80 acejam/nginx-s3-proxy
 
 ## Config options
 
-This container includes support for various Bitmessage configuration values. These values can be set when calling `docker run` through the use of environment variables.
+This container includes support for various configuration values. These values can be set when calling `docker run` through the use of environment variables.
 
 The following values are configurable:
-* `RPC_USER`
-* `RPC_PASS`
-* `RPC_INTERFACE`
-
-For example, to run the container with the username "DevUser" and a password of "P@ssw0rd123", you can run the following:
-
-      docker run -d -e RPC_USER="DevUser" -e RPC_PASS="P@ssw0rd123" acejam/bitmessage:latest
-
-## Data persistence
-
-Coming soon! -->
+* `S3_BUCKET`
+* `AWS_ACCESS_KEY`
+* `AWS_SECRET_KEY`
