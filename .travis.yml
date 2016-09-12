@@ -1,0 +1,11 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -t acejam/nginx-s3-proxy .
+
+branches:
+  only:
+    - master
